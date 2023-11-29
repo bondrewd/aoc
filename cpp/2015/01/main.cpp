@@ -4,6 +4,7 @@
 
 template<typename T = char>
 int last_floor(std::ifstream& file) {
+  file.seekg(0);
   int floor{};
   for (std::istreambuf_iterator<T> it{file}, end; it != end; it++) {
     switch (*it) {
