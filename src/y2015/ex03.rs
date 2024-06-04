@@ -40,15 +40,15 @@ fn ex03b(inp: &str) -> u64 {
     let mut map = HashMap::new();
     map.insert(pos[0], 1);
     for (i, c) in inp.chars().enumerate() {
-        let p = if i % 2 == 0 { &mut pos[0] } else { &mut pos[1] };
+        let i = i % 2;
         match c {
-            '^' => p.y += 1,
-            '>' => p.x += 1,
-            'v' => p.y -= 1,
-            '<' => p.x -= 1,
+            '^' => pos[i].y += 1,
+            '>' => pos[i].x += 1,
+            'v' => pos[i].y -= 1,
+            '<' => pos[i].x -= 1,
             _ => {}
         }
-        let count = map.entry(*p).or_insert(0);
+        let count = map.entry(pos[i]).or_insert(0);
         *count += 1;
     }
     map.values().count() as u64
