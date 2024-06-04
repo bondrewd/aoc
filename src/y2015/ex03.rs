@@ -8,7 +8,7 @@ pub fn ex03() {
 
     let inp = fs::read_to_string(inp_path).unwrap();
     println!("2015-03a: {}", ex03a(&inp));
-    println!("2015-03b: {}", ex03b(&inp))
+    println!("2015-03b: {}", ex03b(&inp));
 }
 
 #[derive(Hash, Eq, PartialEq, Clone, Copy)]

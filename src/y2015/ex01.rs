@@ -7,7 +7,7 @@ pub fn ex01() {
 
     let inp = fs::read_to_string(inp_path).unwrap();
     println!("2015-01a: {}", ex01a(&inp));
-    println!("2015-01b: {}", ex01b(&inp).unwrap())
+    println!("2015-01b: {}", ex01b(&inp).unwrap());
 }
 
 fn ex01a(inp: &str) -> i64 {

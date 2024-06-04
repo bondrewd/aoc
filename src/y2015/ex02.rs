@@ -7,7 +7,7 @@ pub fn ex02() {
 
     let inp = fs::read_to_string(inp_path).unwrap();
     println!("2015-02a: {}", ex02a(&inp));
-    println!("2015-02b: {}", ex02b(&inp))
+    println!("2015-02b: {}", ex02b(&inp));
 }
 
 struct Dimensions {
