@@ -11,24 +11,24 @@ pub fn ex04() {
     println!("2015-04b: {}", ex04b(&inp).unwrap());
 }
 
-fn find_number(inp: &str, header: &str) -> Option<u64> {
+fn find_number(inp: &str, num: usize) -> Option<u64> {
     let inp = inp.split_whitespace().collect::<String>();
     for i in 0.. {
         let hash = inp.clone() + i.to_string().as_str();
         let hash = md5::compute(hash);
         let hash = format!("{hash:x}");
-        if hash.starts_with(header) {
+        if hash.chars().take(num).all(|c| c == '0') {
             return Some(i);
         }
     }
     None
 }
 fn ex04a(inp: &str) -> Option<u64> {
-    find_number(inp, "00000")
+    find_number(inp, 5)
 }
 
 fn ex04b(inp: &str) -> Option<u64> {
-    find_number(inp, "000000")
+    find_number(inp, 6)
 }
 
 #[cfg(test)]
