@@ -51,8 +51,8 @@ fn qb1(inp: &str) -> bool {
         .any(|(i, (a, b))| {
             inp.chars()
                 .zip(inp.chars().skip(1))
-                .enumerate()
-                .any(|(j, (c, d))| (j as i32) - (i as i32) >= 2 && a == c && b == d)
+                .skip(i + 2)
+                .any(|(c, d)| a == c && b == d)
         })
 }
 
