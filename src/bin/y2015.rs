@@ -3,6 +3,7 @@ use aoc::y2015::ex02;
 use aoc::y2015::ex03;
 use aoc::y2015::ex04;
 use aoc::y2015::ex05;
+use aoc::y2015::ex06;
 
 fn main() {
     ex01();
@@ -10,4 +11,5 @@ fn main() {
     ex03();
     ex04();
     ex05();
+    ex06();
 }
