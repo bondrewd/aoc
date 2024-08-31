@@ -68,14 +68,14 @@ fn ex06a(inp: &str) -> u64 {
             Command::On(r) => {
                 for row in grid.iter_mut().take(r.x2 + 1).skip(r.x1) {
                     for g in row.iter_mut().take(r.y2 + 1).skip(r.y1) {
-                        *g = g.saturating_add(1);
+                        *g = 1;
                     }
                 }
             }
             Command::Off(r) => {
                 for row in grid.iter_mut().take(r.x2 + 1).skip(r.x1) {
                     for g in row.iter_mut().take(r.y2 + 1).skip(r.y1) {
-                        *g = g.saturating_sub(1);
+                        *g = 0;
                     }
                 }
             }
