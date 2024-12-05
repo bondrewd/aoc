@@ -36,7 +36,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_ex04a() {
+    fn test_2015ex04a() {
         let mut inp;
 
         inp = "abcdef";

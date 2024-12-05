@@ -59,7 +59,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_ex03a() {
+    fn test_2015ex03a() {
         let mut inp;
 
         inp = ">";
@@ -73,7 +73,7 @@ mod tests {
     }
 
     #[test]
-    fn test_ex03b() {
+    fn test_2015ex03b() {
         let mut inp;
 
         inp = "^v";

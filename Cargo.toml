@@ -4,8 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+clap = { version = "4.5.22", features = ["derive"] }
 md5 = "0.7.0"
 
 [[bin]]
-name = "2015"
-path = "src/bin/y2015.rs"
+name = "aoc"
+path = "src/bin/aoc.rs"

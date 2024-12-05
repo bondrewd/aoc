@@ -131,7 +131,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_ex06a() {
+    fn test_2015ex06a() {
         let mut inp;
 
         inp = "turn on 0,0 through 999,999";
@@ -145,7 +145,7 @@ mod tests {
     }
 
     #[test]
-    fn test_ex06b() {
+    fn test_2015ex06b() {
         let mut inp;
 
         inp = "turn on 0,0 through 0,0";

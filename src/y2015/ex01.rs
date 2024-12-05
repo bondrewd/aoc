@@ -46,7 +46,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_ex01a() {
+    fn test_2015ex01a() {
         let mut inp;
 
         inp = "(())";
@@ -78,7 +78,7 @@ mod tests {
     }
 
     #[test]
-    fn test_ex01b() {
+    fn test_2015ex01b() {
         let mut inp;
 
         inp = ")";
