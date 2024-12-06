@@ -28,11 +28,12 @@ fn main() {
             5 => aoc::y2015::ex05(),
             6 => aoc::y2015::ex06(),
             _ => println!("year {}, problem {} not yet implemented", year, problem),
-        }
+        },
         2024 => match args.problem {
             1 => aoc::y2024::ex01(),
+            2 => aoc::y2024::ex02(),
             _ => println!("year {}, problem {} not yet implemented", year, problem),
-        }
+        },
         _ => println!("year {} not yet implemented", year),
     }
 }

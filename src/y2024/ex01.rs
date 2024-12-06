@@ -7,8 +7,8 @@ pub fn ex01() {
     inp_path.push("inp/2024/01.inp");
 
     let inp = fs::read_to_string(inp_path).unwrap();
-    println!("2024-01a: {}", crate::y2024::ex01::ex01a(&inp));
-    println!("2024-01b: {}", crate::y2024::ex01::ex01b(&inp));
+    println!("2024-01a: {}", ex01a(&inp));
+    println!("2024-01b: {}", ex01b(&inp));
 }
 
 fn ex01a(inp: &str) -> i64 {
