@@ -9,3 +9,7 @@ md5 = "0.7.0"
 [[bin]]
 name = "2015"
 path = "src/bin/y2015.rs"
+
+[[bin]]
+name = "2025"
+path = "src/bin/y2025.rs"

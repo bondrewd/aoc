@@ -1,13 +1,13 @@
 use std::fs;
 use std::path::PathBuf;
 
-pub fn ex02() {
+pub fn main() {
     let mut inp_path = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
     inp_path.push("inp/2015/02.inp");
 
     let inp = fs::read_to_string(inp_path).unwrap();
-    println!("2015-02a: {}", ex02a(&inp));
-    println!("2015-02b: {}", ex02b(&inp));
+    println!("2015-02a: {}", ex_a(&inp));
+    println!("2015-02b: {}", ex_b(&inp));
 }
 
 struct Dimensions {
@@ -51,7 +51,7 @@ impl From<&str> for Dimensions {
     }
 }
 
-fn ex02a(inp: &str) -> u64 {
+fn ex_a(inp: &str) -> u64 {
     inp.lines()
         .map(Dimensions::from)
         .map(|d| d.paper_area())
@@ -59,7 +59,7 @@ fn ex02a(inp: &str) -> u64 {
         .unwrap()
 }
 
-fn ex02b(inp: &str) -> u64 {
+fn ex_b(inp: &str) -> u64 {
     inp.lines()
         .map(Dimensions::from)
         .map(|d| d.ribbon_length())
@@ -72,24 +72,24 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_ex02a() {
+    fn test_ex_a() {
         let mut inp;
 
         inp = "2x3x4";
-        assert_eq!(ex02a(inp), 58);
+        assert_eq!(ex_a(inp), 58);
 
         inp = "1x1x10";
-        assert_eq!(ex02a(inp), 43);
+        assert_eq!(ex_a(inp), 43);
     }
 
     #[test]
-    fn test_ex02b() {
+    fn test_ex_b() {
         let mut inp;
 
         inp = "2x3x4";
-        assert_eq!(ex02b(inp), 34);
+        assert_eq!(ex_b(inp), 34);
 
         inp = "1x1x10";
-        assert_eq!(ex02b(inp), 14);
+        assert_eq!(ex_b(inp), 14);
     }
 }
